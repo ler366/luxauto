@@ -1,0 +1,368 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #111;
+  color: white;
+  line-height: 1.6;
+}
+
+.hero {
+  background: url('https://images.unsplash.com/photo-1603386329225-868f8efb1d56') center/cover no-repeat;
+  height: 100vh;
+  position: relative;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #fff;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  max-width: 500px;
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #fff;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #ccc;
+}
+
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.models .model-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.model-card {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 300px;
+}
+
+.model-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.tech img {
+  width: 80%;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
+  gap: 15px;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+form button {
+  background: white;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+}
+.hero {
+    background-image: url('./BMWM8competition.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.music-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.music-btn:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+/* Animation pour les cartes de modèles */
+.model-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.model-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation pour les images dans les cartes */
+.model-card img {
+    transition: all 0.3s ease;
+}
+
+.model-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Animation pour le texte */
+.model-card h3,
+.model-card p {
+    transition: all 0.3s ease;
+}
+
+.model-card:hover h3 {
+    color: #007bff; /* Vous pouvez changer cette couleur selon votre thème */
+}
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader {
+    text-align: center;
+    color: white;
+}
+
+.car {
+    font-size: 50px;
+    margin-bottom: 20px;
+    animation: drive 1s infinite;
+}
+
+@keyframes drive {
+    0% {
+        transform: translateX(-20px);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+    100% {
+        transform: translateX(-20px);
+    }
+}
+
+/* Cache le contenu principal pendant le chargement */
+body {
+    overflow: hidden;
+}
+
+/* Fait apparaître le contenu en fondu */
+body.loaded {
+    overflow: auto;
+}
+
+.loader-container.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-out;
+}
+/* Style de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style pour les images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Style pour les sections */
+.section {
+    width: 100%;
+    padding: 4rem 2rem;
+}
+
+/* Grille des modèles */
+.model-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Media Queries pour Tablettes */
+@media screen and (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+    
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .navbar li {
+        margin: 10px 0;
+    }
+    
+    .model-card {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Media Queries pour Mobiles */
+@media screen and (max-width: 480px) {
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .section {
+        padding: 2rem 1rem;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .logo {
+        margin-bottom: 1rem;
+    }
+    
+    .contact form {
+        width: 100%;
+    }
+    
+    input, textarea {
+        width: 100%;
+    }
+}
+
+/* Pour les grands écrans */
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .hero-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+/* Pour s'assurer que la hauteur est toujours 100% de l'écran */
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Style pour les éléments flex */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Style pour le formulaire de contact */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Style pour les boutons */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    white-space: nowrap;
+}
