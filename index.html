@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LUXAUTO - L’élégance automobile</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="loader-container">
+        <div class="loader">
+            <div class="car">
+                <i class="fas fa-car"></i>
+            </div>
+            <h2>LUXAUTO</h2>
+        </div>
+    </div>
+   <body>
+    <!-- Ajouter après l'ouverture du body -->
+    <audio id="bgMusic" loop>
+        <source src="./Flawed Mangoes - Swimming (Visualizer).mp3" type="audio/mp3">
+        Votre navigateur ne supporte pas l'élément audio.
+    </audio>
+    <button id="musicToggle" class="music-btn">
+        <i class="fas fa-volume-up"></i>
+    </button>
+  <header class="hero">
+    <nav class="navbar">
+      <h1 class="logo">LUXAUTO</h1>
+      <ul>
+        <li><a href="#modeles">Modèles</a></li>
+        <li><a href="#technologie">Technologie</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <h2>L'avenir de la conduite</h2>
+      <p>Design, performance et technologie réunis.</p>
+      <a href="#modeles" class="btn">Découvrir nos modèles</a>
+    </div>
+  </header>
+
+  <section id="modeles" class="section models">
+    <h2>Nos Modèles</h2>
+    <div class="model-grid">
+      <div class="model-card">
+        <img src="./bmw-i7m702025.webp" alt="Modèle Luxe">
+        <h3>Lux GT</h3>
+        <p>Une berline de prestige avec 600ch et intérieur cuir.</p>
+      </div>
+      <div class="model-card">
+        <img src="./bmw xm.png" alt="SUV Sportif">
+        <h3>Lux SUV-X</h3>
+        <p>Polyvalent, puissant et raffiné. L’excellence tout-terrain.</p>
+      </div>
+      <div class="model-card">
+        <img src="./bmw ix2.png" alt="Modèle Électrique">
+        <h3>Lux eDrive</h3>
+        <p>100% électrique. 0 émission. 100% adrénaline.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="technologie" class="section tech">
+    <h2>Technologie de pointe</h2>
+    <p>LUXAUTO intègre l’intelligence artificielle, l’assistance vocale, et une conduite semi-autonome dans tous ses modèles.</p>
+    <img src="./Zeekr 9X.png" alt="Technologie bord" />
+  </section>
+
+  <section id="contact" class="section contact">
+    <h2>Contact</h2>
+    <form>
+      <input type="text" placeholder="Votre nom" required />
+      <input type="email" placeholder="Votre email" required />
+      <textarea placeholder="Votre message" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 LUXAUTO. Tous droits réservés.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    const bgMusic = document.getElementById('bgMusic');
+    const musicToggle = document.getElementById('musicToggle');
+    let isMusicPlaying = false;
+
+    musicToggle.addEventListener('click', () => {
+        if (isMusicPlaying) {
+            bgMusic.pause();
+            musicToggle.innerHTML = '<i class="fas fa-volume-mute"></i>';
+        } else {
+            bgMusic.play();
+            musicToggle.innerHTML = '<i class="fas fa-volume-up"></i>';
+        }
+        isMusicPlaying = !isMusicPlaying;
+    });
+</script>
+</body>
+<script>
+    window.addEventListener('load', () => {
+        // Attend 2 secondes avant de faire disparaître le loader
+        setTimeout(() => {
+            const loader = document.querySelector('.loader-container');
+            loader.classList.add('fade-out');
+            document.body.classList.add('loaded');
+            
+            // Supprime complètement le loader après l'animation
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 500);
+        }, 2000);
+    });
+</script>
+</body>
+</body>
+</html>
+
