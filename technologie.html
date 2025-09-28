@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title>Technologie LUXAUTO</title>
+    <!-- <! -- icone de l'onglet --> 
+    <link rel="shortcut icon" href="./ChatGPT Image 20 sept. 2025, 13_12_55.png" type="image/png" />
+    <link rel="stylesheet" href="technologie.css">
+</head>
+<body>
+    <!-- Ajouter après l'ouverture du body -->
+    <audio id="bgMusic" loop>
+        <source src="./Flawed Mangoes - Swimming (Visualizer).mp3" type="audio/mp3">
+        Votre navigateur ne supporte pas l'élément audio.
+    </audio>
+    <button id="musicToggle" class="music-btn">
+        <i class="fas fa-volume-up"></i>
+    </button>
+    <header class="hero">
+        <nav class="navbar">
+          <h1 class="logo">
+            <a href="index.html">LUXAUTO</a>
+          </h1>
+          <ul>
+            <li><a href="modeles.html">Modèles</a></li>
+            <li><a href="technologie.html">Technologie</a></li>
+            <li><a href="login.html">Connexion</a></li>
+          </ul>
+        </nav>
+        <div class="hero">
+            <video autoplay muted loop id="bgVideo">
+                <source src="./bmw-xm-pub.mp4" type="video/mp4">
+            </video>
+            <nav class="toggleSound">
+            <button onclick="toggleSound()">Activer le son</button>
+            <script>
+              function toggleSound() {
+                let video = document.getElementById("bgVideo");
+                if (video.muted) {
+                  video.muted = false;
+                } else {
+                  video.muted = true;
+                }
+              }
+            </script>
+        </div>
+        <div class="hero-content">
+      <h2>Notre technologie</h2>
+      <p>Design, performance et technologie réunis.</p>
+      <a href="modeles.html" class="btn">Découvrir nos modèles</a>
+       </div>
+        </header>
+    <h1 class="com">Une technologie or du commun</h1>
+    <section class="tech-section">
+        <img src="./mercedes maybach.png" alt="mercedes maybach" class="tech-image" style="width: 1000px; height: auto; position: relative; left: 25%;">
+    <p>Chez LUXAUTO, nous repoussons les limites de l'innovation pour vous offrir une expérience de conduite inégalée. Nos véhicules sont équipés des dernières avancées technologiques, alliant performance, sécurité et confort. Découvrez comment nous intégrons la technologie de pointe dans chaque aspect de nos voitures, de l'assistance à la conduite aux systèmes de divertissement embarqués.</p>
+    </section>
+    <h1 class="com">Assistance à la conduite</h1>
+    <img src="./bmw xm mansory.webp" alt="bmw xm mansory" class="tech-image" style="width: 1000px; height: auto; position: relative; left: 25%;">
+    <section class="tech-section">
+        <p>Nos systèmes avancés d'assistance à la conduite vous offrent une sécurité accrue et une tranquillité d'esprit sur la route. Grâce à des capteurs sophistiqués et à l'intelligence artificielle, nos véhicules peuvent anticiper les dangers, maintenir la distance de sécurité et même effectuer des manœuvres d'urgence si nécessaire.</p>
+    </section>
+     <footer>
+    <p>&copy; 2025 LUXAUTO. Tous droits réservés.</p>
+  </footer>
+    <script>
+    const bgMusic = document.getElementById('bgMusic');
+    const musicToggle = document.getElementById('musicToggle');
+    let isMusicPlaying = false;
+
+    musicToggle.addEventListener('click', () => {
+        if (isMusicPlaying) {
+            bgMusic.pause();
+            musicToggle.innerHTML = '<i class="fas fa-volume-mute"></i>';
+        } else {
+            bgMusic.play();
+            musicToggle.innerHTML = '<i class="fas fa-volume-up"></i>';
+        }
+        isMusicPlaying = !isMusicPlaying;
+    });
+</script>
+</body>
+</html>
